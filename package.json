@@ -1,0 +1,22 @@
+{
+  "name": "simple-task-mgt-sys",
+  "version": "1.0.0",
+  "description": "a simple task management system (niyo assessment)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": "https://github.com/njokdan/simple-task-mgt-sys.git",
+  "author": "Daniel Njoku",
+  "license": "MIT",
+  "private": "false",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0",
+    "socket.io": "^4.7.5"
+  }
+}
