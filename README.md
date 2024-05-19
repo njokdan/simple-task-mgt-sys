@@ -138,28 +138,27 @@ This is a RESTful API for a simple task management system built with Node.js, Ex
   - Endpoint: /api/tasks/:id
   - Method: PUT
   - Request Body:
-
-  ```json
-  {
-    "title": "Updated Task Title",
-    "description": "Updated Task Description",
-    "completed": true
-  }
+    ```json
+    {
+      "title": "Updated Task Title",
+      "description": "Updated Task Description",
+      "completed": true
+    }
 
   - Response:
     - Status Code: `200 OK`
     - Response Body:
 
-    ```json
-    {
-      "_id": "60a8b9e9c7d63c2c6c9e5d8b",
-      "title": "Updated Task Title",
-      "description": "Updated Task Description",
-      "completed": true,
-      "user": "60a8b9e9c7d63c2c6c9e5d8a",
-      "createdAt": "2021-05-21T12:34:56.789Z",
-      "updatedAt": "2021-05-24T11:22:33.456Z"
-    }
+      ```json
+      {
+        "_id": "60a8b9e9c7d63c2c6c9e5d8b",
+        "title": "Updated Task Title",
+        "description": "Updated Task Description",
+        "completed": true,
+        "user": "60a8b9e9c7d63c2c6c9e5d8a",
+        "createdAt": "2021-05-21T12:34:56.789Z",
+        "updatedAt": "2021-05-24T11:22:33.456Z"
+      }
 
 ### Delete a Task
   - Endpoint: /api/tasks/:id
