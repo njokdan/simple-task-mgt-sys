@@ -56,15 +56,15 @@ Example:
 
 ## API Endpoints
 
-### Tasks
+## Tasks
 
-### Create a Task
+## Create a Task
 
   - Endpoint: `/api/tasks`
   - Method: `POST`
   - Request Body:
 
-    ```json
+    ```bash
     {
       "title": "Task Title",
       "description": "Task Description"
@@ -85,7 +85,7 @@ Example:
       "updatedAt": "2021-05-21T12:34:56.789Z"
     }
 
-### Get All Tasks
+## Get All Tasks
   - Endpoint: `/api/tasks`
   - Method: `GET`
   - Response:
@@ -114,7 +114,7 @@ Example:
       }
     ]
 
-### Get a Task by ID
+## Get a Task by ID
   - Endpoint: `/api/tasks/:id`
   - Method: `GET`
   - Response:
@@ -132,7 +132,7 @@ Example:
       "updatedAt": "2021-05-21T12:34:56.789Z"
     }
 
-### Update a Task
+## Update a Task
   - Endpoint: /api/tasks/:id
   - Method: PUT
   - Request Body:
@@ -159,7 +159,7 @@ Example:
       "updatedAt": "2021-05-24T11:22:33.456Z"
     }
 
-### Delete a Task
+## Delete a Task
   - Endpoint: /api/tasks/:id
   - Method: DELETE
   - Response:
