@@ -52,7 +52,7 @@ All endpoints, except for user registration and login, require authentication us
 Example:
 
    ```bash
-   Authorization: Bearer <token>
+    Authorization: Bearer <token>
 
 ## API Endpoints
 
