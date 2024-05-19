@@ -51,8 +51,8 @@ All endpoints, except for user registration and login, require authentication us
 
 Example:
 
-  ```bash
-  Authorization: Bearer <token>
+   ```bash
+   Authorization: Bearer <token>
 
 ## API Endpoints
 
