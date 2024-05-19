@@ -180,12 +180,12 @@ The API uses Socket.IO to stream real-time updates for task creation, update, an
 Each event will emit the corresponding task data as the payload.
 
 ## Error Handling
-In case of errors, the API will respond with appropriate HTTP status codes and error messages in the following format:
+  In case of errors, the API will respond with appropriate HTTP status codes and error messages in the following format:
 
-  ```json
-  {
-    "error": "Error message"
-  }
+    ```json
+    {
+      "error": "Error message"
+    }
 
 
 
