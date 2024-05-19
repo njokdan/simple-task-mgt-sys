@@ -11,16 +11,13 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-// Connect to MongoDB
-// mongoose
-//   .connect(process.env.MONGODB_URI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => console.log('MongoDB connected'))
-//   .catch((err) => console.error('MongoDB connection error:', err));
+const server = require('http').createServer(app);
+const socketMiddleware = initializeSocket(server);
 
-// Routes
+// Register Socket.IO middleware
+app.use(socketMiddleware);
+
+// Routes for tasks and auth
 app.use('/api/tasks', auth, taskRoutes);
 app.use('/api/auth', authRoutes);
 
@@ -31,11 +28,10 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Something went wrong' });
 });
 
-const server = app.listen(process.env.PORT, () => {
+ server.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
 
-const io = initializeSocket(server);
-app.set('io', io);
+
 
 module.exports = app;

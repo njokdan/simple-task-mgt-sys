@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const auth = (req, res, next) => {
   const token = req.header('Authorization');
-  console.log("token 1",token);
+  //console.log("token 1",token);
   if (!token) {
     return res.status(401).json({ error: 'Access denied. No token provided.' });
   }
@@ -22,8 +22,8 @@ const auth = (req, res, next) => {
   try {
     console.log("process.env.JWT_SECRET", process.env.JWT_SECRET);
     const decoded = jwt.verify(token.replace('Bearer ', ''), process.env.JWT_SECRET);
-    console.log("decoded", decoded);
-    console.log("decoded_user_id", decoded.userId);
+    //console.log("decoded", decoded);
+    //console.log("decoded_user_id", decoded.userId);
     req.user = { userId: decoded.userId };
     next();
   } catch (err) {
