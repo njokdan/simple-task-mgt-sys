@@ -2,6 +2,10 @@
 
 This is a RESTful API for a simple task management system built with Node.js, Express, and MongoDB. It provides endpoints for user authentication, creating, reading, updating, and deleting tasks.
 
+## Base URL
+
+The base URL for all API endpoints is: `http://localhost:3000/api`
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
