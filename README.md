@@ -47,12 +47,14 @@ This is a RESTful API for a simple task management system built with Node.js, Ex
 
 ## Authentication
 
-All endpoints, except for user registration and login, require authentication using a JWT token. The token should be included in the `Authorization` header of the request.
+  All endpoints, except for user registration and login, require authentication using a JWT token. The token should be included in the `Authorization` header of the request.
 
-Example:
+  Example:
 
-   ```bash
-   Authorization: Bearer <token>
+    Authorization: Bearer <token>
+
+
+
 
 ## API Endpoints
 
