@@ -3,6 +3,11 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+variables:
+  PORT: '3000'
+  MONGODB_URI: 'mongodb+srv://njokdan:njokdan1234@dataxapp.lfu4g2q.mongodb.net/taskmanager'
+  JWT_SECRET: 'f309cf7d16cdda05893af812884e729ceb4b83cca38b939ab273a71fc8f0c451'
+
 trigger:
 - main
 
@@ -15,7 +20,25 @@ steps:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run start
-  displayName: 'npm install and start'
+# - script: |
+#     npm install
+#     npm run start
+#     echo "##vso[task.setvariable variable=MONGODB_URI]mongodb://your-mongodb-uri"
+#   displayName: 'npm install and start'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+  env:
+    PORT: $(PORT)
+    MONGODB_URI: $(MONGODB_URI)
+    JWT_SECRET: $(JWT_SECRET)
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run start'
+  env:
+    PORT: $(PORT)
+    MONGODB_URI: $(MONGODB_URI)
+    JWT_SECRET: $(JWT_SECRET)
