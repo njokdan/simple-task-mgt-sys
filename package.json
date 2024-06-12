@@ -4,6 +4,8 @@
   "description": "a simple task management system (niyo assessment)",
   "main": "server.js",
   "scripts": {
+    "build": "webpack --mode=production",
+    "test": "jest",
     "start": "node src/server.js"
   },
   "repository": "https://github.com/njokdan/simple-task-mgt-sys.git",
